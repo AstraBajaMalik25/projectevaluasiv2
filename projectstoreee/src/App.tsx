@@ -6,6 +6,8 @@ import ProductDetail from "@/pages/ProductsDetail";
 import Checkout from "@/pages/Checkout";
 import Login from "@/pages/Login";
 import Admin from "@/pages/Admin";
+import Contact from "@/pages/Contact";
+import NotFound from "@/pages/NotFound";
 import { AuthProvider } from "@/context/AuthContext";
 import { CartProvider } from "@/context/CartContext";
 
@@ -22,6 +24,8 @@ function App() {
             <Route path="/checkout" element={<Checkout />} />
             <Route path="/login" element={<Login />} />
             <Route path="/admin" element={<Admin />} />
+            <Route path="/contact" element={<Contact />} />
+            <Route path="*" element={<NotFound />} /> {/* 404 fallback */}
           </Routes>
         </Router>
       </CartProvider>

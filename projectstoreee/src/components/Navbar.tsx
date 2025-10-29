@@ -21,14 +21,10 @@ export default function Navbar() {
         <Link to="/">Home</Link>
         <Link to="/products">Products</Link>
         <Link to="/checkout">Checkout</Link>
+        <Link to="/contact">Contact</Link>
 
-        {/* hanya tampil kalau belum login */}
         {!isLoggedIn && <Link to="/login">Login</Link>}
-
-        {/* hanya tampil kalau login sebagai admin */}
         {isLoggedIn && user === "admin" && <Link to="/admin">Admin</Link>}
-
-        {/* tombol logout */}
         {isLoggedIn && (
           <button
             onClick={logout}
